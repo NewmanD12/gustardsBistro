@@ -1,0 +1,43 @@
+#aboutLandingPhoto{
+    width: 55%;
+    border-radius: 3%;
+    border: 5px solid maroon;
+}
+
+#flameyDripAbout {
+    width: 75%;
+    border-radius: 3%;
+    border: 5px solid maroon;
+}
+
+
+@media (max-width: 765px){
+
+    #secondRow{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #para2, #para1 {
+        text-align: center;
+        padding: 0 5%;
+    }
+
+    #img1{
+        padding-left: 25%;
+    }
+
+    #img2{
+        padding-right: 25%;
+    }
+
+    #flameyDripAbout{
+        width: 75%;
+    }
+
+
+
+
+
+
+}

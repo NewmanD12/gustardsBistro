@@ -1,0 +1,11 @@
+.button-cols{
+    display: none;
+}
+
+#addAnotherButton{
+    cursor: pointer;
+}
+
+.allergyWarnings{
+    font-size: 60%;
+}

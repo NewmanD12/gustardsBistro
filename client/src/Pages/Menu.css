@@ -1,0 +1,48 @@
+#lunch-menu-body, #dinner-menu-body, #kids-menu-body {
+    background-image: inherit;
+    color : #1a2536;
+    padding-top: 50px;
+}
+
+
+
+.course-headers{
+    font-size: 300%;
+    font-weight: bold;
+}
+
+#apps-div, #starters-div , #sandwiches-and-pies-div, #bowls-div, #desserts-div, #comforts-div, #entrees-div, #kids-menu-div {
+    border: 5px solid #1a2536;
+}
+
+#individual-menu-items {
+    font-size: xx-large;
+    padding: 0 15% 0 15%;
+    margin: 5% 0%;
+}
+
+#menu-item-desc{
+    font-size: 70%;
+    font-weight: 100;
+    text-align: left;
+}
+
+#menu-item-price{
+    text-align: right;
+    font-size: smaller;
+    margin: auto;
+}
+
+#menu-item-title{
+    text-align: left;
+    font-size: 125%;
+}
+
+#switch-menu{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.subs {
+    font-size: 54%;
+}

@@ -1,0 +1,11 @@
+.buttons {
+    width: 50%;
+    height: 75%;
+    margin: 5% 0;
+    font-size: xx-large;
+    text-align: center;
+    text-shadow: 2px 1px black;
+    background-color: rgb(71, 110, 162);
+    color: white;
+    border-radius: 10px;
+}

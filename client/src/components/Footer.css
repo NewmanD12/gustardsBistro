@@ -1,0 +1,20 @@
+#footer-container{
+    background-color: #f9e4bc;
+    height: 25%;
+    box-shadow: 0px -4px 5px black;
+}
+
+#footer-logo{
+    width: 175px;
+    position: relative;
+    top: 30%;
+}
+
+#phoneNumber{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-cols{
+    margin-top: -5px;
+}
