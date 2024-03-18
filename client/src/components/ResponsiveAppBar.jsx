@@ -18,7 +18,17 @@ function ResponsiveAppBar() {
     setShowNavbar(!showNavbar)
   }
 
-  console.log(auth)
+  // console.log(auth)
+  // const toggleNavElements = () => {
+  //   const navElements = document.getElementById('nav-elements')
+  //   if(navElements.className.includes('active')){
+  //     navElements.classList.toggle('active')
+  //   }
+  //   else {
+  //     navElements.classList.toggle('active')
+  //   }
+
+  // }
 
   return (
     <nav className="navbar">
@@ -29,8 +39,9 @@ function ResponsiveAppBar() {
               <Col onClick={() => navigate('/')}>
                 <img src={`/gustardsBistroBlue.png`} id='logo'></img>
               </Col>
-              <Col xs={2}  className='menu-icon' onClick={() => {
+              <Col xs={2} id='menu-icon'  className='menu-icon' onClick={() => {
                 handleShowNavbar()
+                console.log('clicked')
               }}>
                 <div id='hamburger'>
                   <div id='bar1'></div>
@@ -42,31 +53,31 @@ function ResponsiveAppBar() {
                 <div id='nav-elements' className={`nav-elements  ${showNavbar && 'active'}`}>
                   <ul>
 
-                    {!auth.userToken && <li>
+                    {!auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to="/">Home</NavLink>
                                         </li>}
                     
-                    {!auth.userToken && <li>
+                    {!auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to="/about">About</NavLink>
                                         </li>}
                     
-                    {!auth.userToken && <li>
+                    {!auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to="/menu">Menu</NavLink>
                                         </li>}
 
-                    {!auth.userToken && <li>
+                    {!auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to="/kids-menu">Kids Menu</NavLink>
                                         </li>}
 
-                    {!auth.userToken && <li>
+                    {!auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to="/tasting-room">Tasting Room</NavLink>
                                         </li>}
                     
-                    {!auth.userToken && <li>
+                    {!auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to="/gallery">Gallery</NavLink>
                                         </li>}
                     
-                    {!auth.userToken && <li>
+                    {!auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to="/localfarmers">Local Farmers</NavLink>
                                         </li>}
 

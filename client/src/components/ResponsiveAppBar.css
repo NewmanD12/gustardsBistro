@@ -161,21 +161,21 @@
 
     #bar1 {
       height: 8px;
-      width: 60px;
+      width: 50px;
       background-color: rgb(90, 121, 147);
       margin-top: 30px;
     }
     
     #bar2 {
       height: 8px;
-      width: 60px;
+      width: 50px;
       margin-top: 5px;
       background-color: rgb(90, 121, 147);
     }
     
     #bar3 {
       height: 8px;
-      width: 60px;
+      width: 50px;
       margin-top: 5px;
       background-color: rgb(90, 121, 147);
     }
@@ -184,9 +184,13 @@
       display: none;
     }
 
+    #menu-icon{
+      z-index: 1;
+    }
+
   }
 
-@media (max-width: 750px) {
+@media (max-width: 775px) {
   .nav-elements {
     position: absolute;
     right: 0;
@@ -197,6 +201,10 @@
     height: calc(91vh - 60px);
     transition: all 0.3s ease-in;
     overflow: hidden;
+    z-index: 1;
+  }
+
+  #menu-icon{
     z-index: 1;
   }
 
@@ -216,4 +224,6 @@
     margin-top: 22px;
     z-index: 1;
   }
+
+  
 }

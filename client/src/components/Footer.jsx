@@ -18,7 +18,7 @@ const Footer = () => {
             <img src='/gustardsBistroBlack.png' id='footer-logo'/>
           </Col>
           <Col md={4} className='footer-cols mt-5'>
-            <p>50 East Main Street</p>
+            <p>759 E Main Street</p>
             <p>White Sulphur Springs, WV 24986</p>
             <CallTo phone="+13045362274">{`(304) 536-2274`}</CallTo>
           </Col>
