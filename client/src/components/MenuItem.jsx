@@ -236,8 +236,55 @@ const MenuItem = (props) => {
     return (
 
         <>
+
+        {!isEditing && !auth.userToken && <Container fluid id='individual-menu-items'>
+            {auth.userToken && <Row 
+                                    className='edit-row justify-content-end' 
+                                    id={`${item._id}-edit-row`}
+                                >
+                                    <Col xs={2} className='button-cols' id={`${item._id}-edit-col`}>
+                                        <Button 
+                                            variant='warning'
+                                            onClick={() => {
+                                                handleEdit(item._id)
+                                            }}    
+                                        >Edit</Button>
+                                    </Col>
+                                    <Col xs={2} className='button-cols' id={`${item._id}-delete-col`}>
+                                        <Button 
+                                            variant='danger'
+                                            onClick={() => {
+                                                handleDelete(item._id)
+                                            }}    
+                                        >Delete</Button>
+                                    </Col>
+                                </Row>
+            }
+            
+            <Row className='justify-content-center'>
+                <Col id='menu-item-title' xs={8}>{item.title}</Col>
+                <Col id='menu-item-price'>${price}</Col>
+            </Row>
+
+            {abbreviatedAllergyWarnings.length > 0 && <Row>
+                <Col>
+                    <p className='allergyWarnings'>[{abbreviatedAllergyWarnings.join(', ')}]</p>
+                </Col>
+            </Row>}
+            
+            <Row>
+                <Col>
+                    <p id='menu-item-desc'>{item.description}</p>
+                </Col>
+            </Row>
+            <Row className='justify-content-center'>
+                <Col>
+                    <p className='subs'>{convertSubs(subs)}</p>
+                </Col>
+            </Row>
+        </Container>}
         
-        {!isEditing && <Container fluid 
+        {!isEditing && auth.userToken && <Container fluid 
                             id='individual-menu-items'
                             onMouseEnter={(e) => {
                                 const editCol = document.getElementById(`${item._id}-edit-col`)
