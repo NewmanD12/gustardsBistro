@@ -17,6 +17,7 @@ import CreateNewUser from './Pages/CreateNewUser'
 import CreateNewFarmer from './Pages/CreateNewFarmer'
 import TastingRoom from './Pages/TastingRoom'
 import KidsMenu from './Pages/KidsMenu'
+import UnderConstruction from './Pages/UnderConstruction'
 
 function App() {
 
@@ -75,7 +76,7 @@ function App() {
         },
         {
           path : '/tasting-room',
-          element : <TastingRoom />
+          element : <UnderConstruction />
         },
         {
           path :'/admin', 
@@ -103,7 +104,7 @@ function App() {
         },
         {
           path : '/localfarmers',
-          element : <LocalFarmers />
+          element : <UnderConstruction />
         },
         {
           path : '/contact',
