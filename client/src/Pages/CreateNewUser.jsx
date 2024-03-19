@@ -23,12 +23,12 @@ const CreateNewUser = (props) => {
       // console.log(firstName, lastName, username, password)
       console.log(errors)
       
-      // const registerResult = await auth.register(firstName, lastName, username, password)
-      // // console.log(registerResult)
-      // if(registerResult.success){
-      //   auth.login(username, password)
-      //   navigate('/')
-      // }
+      const registerResult = await auth.register(firstName, lastName, username, password)
+      // console.log(registerResult)
+      if(registerResult.success){
+        auth.login(username, password)
+        navigate('/')
+      }
   }
 
   return (
