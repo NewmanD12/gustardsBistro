@@ -18,3 +18,8 @@
 .footer-cols{
     margin-top: -5px;
 }
+
+#admin-login{
+    color: black;
+    text-decoration: none;
+}

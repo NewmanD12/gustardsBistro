@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import './Footer.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, NavLink } from 'react-router-dom'
 
 const Footer = () => {
 
@@ -28,9 +28,12 @@ const Footer = () => {
             <p>Closed Tuesday</p>
           </Col>
         </Row>
-        <Row className='justify-content-center text-center'>
-          <Col>
+        <Row className='justify-content-center text-center my-5'>
+          <Col sm={6}>
             <p>©2024 All Rights Reserved</p>
+          </Col>
+          <Col sm={6}>
+            <NavLink to="/login" id='admin-login'>Admin Login</NavLink>
           </Col>
         </Row>
         
