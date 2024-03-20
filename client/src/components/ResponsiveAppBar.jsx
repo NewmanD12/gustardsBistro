@@ -152,15 +152,13 @@ function ResponsiveAppBar() {
                                         <NavLink to='/localfarmers' onClick={(e) => handleShowNavbar()}>Local Farmers</NavLink>
                                       </li>}                   
 
-                    {auth.userToken && <li>
+                    {auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to='/admin'>Admin</NavLink>
                                         </li>}
 
-                    {auth.userToken && <li>
+                    {auth.userToken && <li onClick={() => handleShowNavbar()}>
                                           <NavLink to='/' onClick={() => {
                                             auth.logout()
-                                            const menu = document.getElementsByClassName('condensed-dropdown')
-                                            menu.style.display = 'none'
                                           }}>Logout</NavLink>
                                         </li>}
                   </ul>

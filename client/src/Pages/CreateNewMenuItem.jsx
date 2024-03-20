@@ -317,39 +317,6 @@ const CreateNewMenuItem = (props) => {
               <Form.Control type="text" placeholder="Enter Price" name='price'/>
               </Form.Group>
             </Col>
-
-          </Row>
-
-          <Row className='justify-content-end mt-3'>
-            <Col xs={2}>
-              <p onClick={() => {
-                const additionalMealPeriod = document.getElementById('additional-meal-period')
-
-                const thisButton = document.getElementById('add-button')
-
-                const cancelButton = document.getElementById('cancel-button')
-
-                additionalMealPeriod.style.display = 'flex'
-                thisButton.style.display = 'none'
-                cancelButton.style.display = 'flex'
-              }}
-              id='add-button'
-              >+Add Another</p>
-              <p onClick={() => {
-                const additionalMealPeriod = document.getElementById('additional-meal-period')
-
-                const addButton = document.getElementById('add-button')
-
-                const thisButton = document.getElementById('cancel-button')
-
-                additionalMealPeriod.style.display = 'none'
-                thisButton.style.display = 'none'
-                addButton.style.display = 'flex'
-
-              }}
-              id='cancel-button'
-              >Cancel</p>
-            </Col>
           </Row>
           
           <Row>

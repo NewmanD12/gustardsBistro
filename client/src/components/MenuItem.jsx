@@ -146,9 +146,6 @@ const MenuItem = (props) => {
 
     const submitEdit = (e) => {
         e.preventDefault()
-        const otherMealPeriodAndPrice = item.mealPeriodAndPrices.filter((item) => {
-                                    return item.mealPeriod !== currentMenu
-                                })
 
         const subsAndUpchargesToPass = [firstSubAndUpcharge, secondSubAndUpcharge, thirdSubAndUpcharge, fourthSubAndUpcharge, fifthSubAndUpcharge]
 
@@ -185,10 +182,9 @@ const MenuItem = (props) => {
                     "mealPeriod" : currentMenu,
                     "course" : editedMenuItem.course ? editedMenuItem.course : course,
                     "price" : editedMenuItem.price ? editedMenuItem.price : price
-                }, otherMealPeriodAndPrice[0]]
+                }]
             }
-            // console.log(item.mealPeriodAndPrices[0].course)
-            // console.log(mealPeriodAndPrices)
+            
             return mealPeriodAndPrices
         }
 
