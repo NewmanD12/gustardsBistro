@@ -30,20 +30,39 @@ const LunchMenu = (props) => {
 
     lunchItems.map((item) => {
         // console.log(item.mealPeriodAndPrices[0].mealPeriod)
-        if(item.mealPeriodAndPrices[0].course === 'saladsAndStarters' || item.mealPeriodAndPrices[1].course === 'saladsAndStarters'){
-            saladsAndStarters = [...saladsAndStarters, item]
+        if(item.mealPeriodAndPrices.length === 2){
+            if(item.mealPeriodAndPrices[0].course === 'saladsAndStarters' || item.mealPeriodAndPrices[1].course === 'saladsAndStarters'){
+                saladsAndStarters = [...saladsAndStarters, item]
+            }
+            else if(item.mealPeriodAndPrices[0].course === 'sandwichesAndPies' || item.mealPeriodAndPrices[1].course === 'sandwichesAndPies'){
+                sandwichesAndPies = [...sandwichesAndPies, item]
+            } 
+            else if(item.mealPeriodAndPrices[0].course === 'sides' || item.mealPeriodAndPrices[1].course === 'sides'){
+                sides = [...sides, item]
+            }
+            else if(item.mealPeriodAndPrices[0].course === 'bowls' || item.mealPeriodAndPrices[1].course === 'bowls'){
+                bowls = [...bowls, item]
+            }
+            else if(item.mealPeriodAndPrices[0].course === 'desserts' || item.mealPeriodAndPrices[1].course === 'desserts'){
+                desserts = [...desserts, item]
+            }
         }
-        else if(item.mealPeriodAndPrices[0].course === 'sandwichesAndPies' || item.mealPeriodAndPrices[1].course === 'sandwichesAndPies'){
-            sandwichesAndPies = [...sandwichesAndPies, item]
-        } 
-        else if(item.mealPeriodAndPrices[0].course === 'sides' || item.mealPeriodAndPrices[1].course === 'sides'){
-            sides = [...sides, item]
-        }
-        else if(item.mealPeriodAndPrices[0].course === 'bowls' || item.mealPeriodAndPrices[1].course === 'bowls'){
-            bowls = [...bowls, item]
-        }
-        else if(item.mealPeriodAndPrices[0].course === 'desserts' || item.mealPeriodAndPrices[1].course === 'desserts'){
-            desserts = [...desserts, item]
+        else {
+            if(item.mealPeriodAndPrices[0].course === 'saladsAndStarters'){
+                saladsAndStarters = [...saladsAndStarters, item]
+            }
+            else if(item.mealPeriodAndPrices[0].course === 'sandwichesAndPies'){
+                sandwichesAndPies = [...sandwichesAndPies, item]
+            } 
+            else if(item.mealPeriodAndPrices[0].course === 'sides'){
+                sides = [...sides, item]
+            }
+            else if(item.mealPeriodAndPrices[0].course === 'bowls'){
+                bowls = [...bowls, item]
+            }
+            else if(item.mealPeriodAndPrices[0].course === 'desserts'){
+                desserts = [...desserts, item]
+            }
         }
     })
 
