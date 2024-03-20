@@ -26,8 +26,7 @@ const CreateNewMenuItem = (props) => {
       let mealPeriodAndPrices = []
       if(primaryMealPeriodAndPrice.course === 'kidsMenu'){
         if(primaryMealPeriodAndPrice.mealPeriod === 'lunch'){
-          mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'dinner', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}]
-          
+          mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'dinner', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}] 
         }
         else {
           mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'lunch', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}]
@@ -203,6 +202,10 @@ const CreateNewMenuItem = (props) => {
             }}>
             
               <Form.Label>Course:</Form.Label>
+
+              {!primaryMealPeriodAndPrice['mealPeriod'] && <Form.Select name='course'>
+              <option id='pick-course'>Pick A Course</option>
+              </Form.Select>}
 
                 {primaryMealPeriodAndPrice['mealPeriod'] === 'lunch' && 
               
