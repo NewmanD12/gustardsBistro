@@ -21,9 +21,7 @@ const LunchMenu = (props) => {
     }
 
     menuItems.map((item) => {
-        let isLunchItem = item.mealPeriodAndPrices.map((item) => item.mealPeriod)
-           
-        if(isLunchItem.includes('lunch')){
+        if(item.mealPeriodAndPrices[0].course === 'lunch'){
             addToLunchItems(item)
         }
     })
