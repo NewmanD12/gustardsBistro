@@ -24,7 +24,7 @@ const DinnerMenu = (props) => {
     }
 
     menuItems.map((item, index) => {
-        if(item.mealPeriodAndPrices[0].course === 'dinner'){
+        if(item.mealPeriodAndPrices[0].mealPeriod === 'dinner'){
             addTodinnerItems(item)
         }
     })
@@ -56,7 +56,7 @@ const DinnerMenu = (props) => {
                 desserts = [...desserts, item]
             }
         }
-        else if(item.mealPeriodAndPrices.length === 1){
+        else {
             if(item.mealPeriodAndPrices[0].course === 'starters'){
                 starters = [...starters, item]
             }

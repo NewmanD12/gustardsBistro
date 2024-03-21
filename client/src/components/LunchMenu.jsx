@@ -21,10 +21,13 @@ const LunchMenu = (props) => {
     }
 
     menuItems.map((item) => {
-        if(item.mealPeriodAndPrices[0].course === 'lunch'){
+        // console.log(item.mealPeriodAndPrices[0].mealPeriod)
+        if(item.mealPeriodAndPrices[0].mealPeriod === 'lunch'){
             addToLunchItems(item)
         }
     })
+
+    // console.log(lunchItems)
 
     lunchItems.map((item) => {
         // console.log(item.mealPeriodAndPrices[0].mealPeriod)
