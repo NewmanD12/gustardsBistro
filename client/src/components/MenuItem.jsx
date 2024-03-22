@@ -88,6 +88,9 @@ const MenuItem = (props) => {
         if(warning === 'shellfish'){
             abbreviatedWarning = 'SF'
         }
+        if(warning === 'nutsSeeds'){
+            abbreviatedWarning = 'NS'
+        }
 
         return abbreviatedWarning
     })
@@ -422,6 +425,13 @@ const MenuItem = (props) => {
                                         id='dairyfree'
                                         label='Dairy Free'
                                         name='dairy free'
+                                        />
+
+                                        <Form.Check // prettier-ignore
+                                        type='checkbox'
+                                        id='nutsSeeds'
+                                        label='Nuts/Seeds'
+                                        name='nutsSeeds'
                                         />
                                     </Form.Group>
                                 </Col>

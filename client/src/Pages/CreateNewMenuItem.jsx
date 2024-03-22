@@ -168,7 +168,14 @@ const CreateNewMenuItem = (props) => {
             label='Shellfish'
             name='shellfish'
             />
-          </Form.Group>
+
+            <Form.Check // prettier-ignore
+            type='checkbox'
+            id='nutsSeeds'
+            label='Nuts/Seeds'
+            name='nutsSeeds'
+            />
+            </Form.Group>
           
           <Row>
             <Col className='mt-3' md={4}>

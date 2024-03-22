@@ -8,7 +8,7 @@ import MenuItem from './MenuItem'
 const DinnerMenu = (props) => {
 
     const { menuItems, currentMenu, setCurrentMenu, menuItemsEndpoint } = props
-    const abbrevLegend = 'GF = Gluten Free, V = Vegan, VEG = Vegetarian, DF = Dairy Free, SF = Shellfish'
+    const abbrevLegend = 'GF = Gluten Free, V = Vegan, VEG = Vegetarian, DF = Dairy Free, SF = Shellfish, NS = Nuts/Seeds'
 
     let dinnerItems = []
     let starters = []

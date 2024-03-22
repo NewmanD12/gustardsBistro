@@ -14,7 +14,7 @@ const LunchMenu = (props) => {
     let sides = []
     let bowls = []
     let desserts = []
-    const abbrevLegend = 'GF = Gluten Free, V = Vegan, VEG = Vegetarian, DF = Dairy Free, SF = Shellfish'
+    const abbrevLegend = 'GF = Gluten Free, V = Vegan, VEG = Vegetarian, DF = Dairy Free, SF = Shellfish, NS = Nuts/Seeds'
 
     const addToLunchItems = (item) => {
         lunchItems = [...lunchItems, item]
