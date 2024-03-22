@@ -38,7 +38,7 @@ const About = () => {
 
           <Row className='justify-content-center align-items-center text-start my-5'>
             <Col id='img3' md={6}>
-              <img className='aboutPics' src='pickingHerbs.jpg'/>
+              <img className='aboutPics' src='pickingHerbs.jpeg'/>
             </Col>
             <Col id='para3' className='mt-4' md={5}>
               <h4>After a year down in Florida, the hills of West Virginia were calling him back and Chef Gustard  took on the position of Rounds Chef at The Greenbrier Sporting Club. Through his hard work and dedication, he was given the opportunity to run a new restaurant at GSC, The  Summit. Chef Gustard oversaw a very popular venue that produced casual Appalachian  Cuisine and was the place to be on The Greenbrier property. After 3 years of running the  successful operation, he was appointed Executive Chef of The Greenbrier Sporting Club.  Being at The Sporting Club for 10 years Chef Gustard decided to take a chance at a  smaller restaurant called the French Goat</h4>
