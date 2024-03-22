@@ -1,11 +1,11 @@
 #aboutLandingPhoto{
-    width: 55%;
+    width: 50%;
     border-radius: 3%;
     border: 5px solid maroon;
 }
 
-#flameyDripAbout {
-    width: 75%;
+.aboutPics {
+    width: 65%;
     border-radius: 3%;
     border: 5px solid maroon;
 }
@@ -13,26 +13,32 @@
 
 @media (max-width: 765px){
 
-    #secondRow{
+    #aboutLandingPhoto{
+        width: 90%;
+        border-radius: 3%;
+        border: 5px solid maroon;
+    }
+
+    #secondRow, #fourthRow, #sixthRow{
         display: flex;
         flex-direction: column-reverse;
     }
 
-    #para2, #para1 {
+    #para2, #para1, #para3, #para4, #para5, #para6{
         text-align: center;
-        padding: 0 5%;
+        padding: 5% 5%;
     }
 
-    #img1{
-        padding-left: 25%;
+    #img1, #img3, #img5{
+        padding-left: 10%;
     }
 
-    #img2{
-        padding-right: 25%;
+    #img2, #img4, #img6{
+        padding-right: 10%;
     }
 
-    #flameyDripAbout{
-        width: 75%;
+    .aboutPics{
+        width: 90%;
     }
 
 
