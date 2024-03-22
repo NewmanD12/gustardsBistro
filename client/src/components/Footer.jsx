@@ -17,7 +17,7 @@ const Footer = () => {
           <Col md={4} className='mt-3' onClick={() => navigate('/')}>
             <img src='/gustardsBistroBlack.png' id='footer-logo'/>
           </Col>
-          <Col md={4} className='footer-cols mt-5'>
+          <Col id='address-col' md={4} className='footer-cols mt-5'>
             <p>759 E Main Street</p>
             <p>White Sulphur Springs, WV 24986</p>
             <CallTo phone="+13045362274">{`(304) 536-2274`}</CallTo>
@@ -29,14 +29,13 @@ const Footer = () => {
           </Col>
         </Row>
         <Row className='justify-content-center text-center my-5'>
-          <Col sm={6}>
+          <Col md={6}>
             <p>©2024 All Rights Reserved</p>
           </Col>
-          <Col sm={6}>
+          <Col md={6}>
             <NavLink to="/login" id='admin-login'>Admin Login</NavLink>
           </Col>
         </Row>
-        
       </Container>    
     )
 }

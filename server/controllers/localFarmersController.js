@@ -29,6 +29,24 @@ async function createLocalFarmer(req, res) {
     }
 }
 
+async function allLocalfarmers(req, res){
+    try {
+        const localFarmers = await LocalFarmer.find({})
+
+        res.json({
+            success : true,
+            localFarmers : localFarmers
+        })
+    }
+    catch (e) {
+        res.json({
+            success : false,
+            error : e.toString()
+        })
+    }
+}
+
 module.exports = {
-    createLocalFarmer
+    createLocalFarmer,
+    allLocalfarmers
 }

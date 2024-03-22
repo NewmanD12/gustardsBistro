@@ -25,6 +25,7 @@ function App() {
   const localFarmersEndpoint = process.env.REACT_APP_LOCALFARMERS_ENDPOINT
   
   const [menuItems, setMenuItems] = useState([])
+  const [localFarmers, setLocalFarmers] = useState([])
   const [currentMenu, setCurrentMenu] = useState('lunch')
 
 
@@ -32,6 +33,14 @@ function App() {
     axios.get(`${menuItemsEndpoint}/all-menu-items`)
           .then((res) => {
             setMenuItems(res.data.menuItems)
+          })
+          .catch((err) => console.log(err))
+  }, [])
+
+  useEffect(() => {
+    axios.get(`${localFarmersEndpoint}/all-local-farmers`)
+          .then((res) => {
+            setLocalFarmers(res.data.localFarmers)
           })
           .catch((err) => console.log(err))
   }, [])
@@ -104,7 +113,10 @@ function App() {
         },
         {
           path : '/localfarmers',
-          element : <UnderConstruction />
+          element : <LocalFarmers
+                      localFarmersEndpoint={localFarmersEndpoint}
+                      localFarmers={localFarmers}
+                    />
         },
         {
           path : '/contact',
