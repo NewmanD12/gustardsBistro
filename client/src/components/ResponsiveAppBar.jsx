@@ -143,6 +143,10 @@ function ResponsiveAppBar() {
                     {auth.userToken && <li className='condensed-dropdown'>
                                         <NavLink to='/kids-menu' onClick={(e) => handleShowNavbar()}>Kids Menu</NavLink>
                                       </li>}
+
+                    {auth.userToken && <li className='condensed-dropdown'>
+                                      <NavLink to="/tasting-room">Tasting Room</NavLink>
+                                    </li>}
                     
                     {auth.userToken && <li className='condensed-dropdown'>
                                         <NavLink to='/gallery' onClick={(e) => handleShowNavbar()}>Gallery</NavLink>

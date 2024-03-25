@@ -7,9 +7,9 @@ import React from 'react'
 const UnderConstruction = () => {
   return (
     <Container fluid id='under-construction-body'>
-        <Row className='justify-content-center text-center'>
+        <Row className='justify-content-center text-center mx-5'>
             <Col md={8}>
-                <h1>This Page is Currently Under Construction. Please Come Back Later!</h1>
+                <h1>The Tasting Room will open it doors May 1st as we work on a fun and creative menu. We look forward to serving you with our upscale dining experience.</h1>
             </Col>
         </Row>
     </Container>
