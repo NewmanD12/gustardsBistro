@@ -2,7 +2,12 @@ import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import MenuItem from './MenuItem'
+import MenuItem from './MenuItem';
+import { Button } from 'react-bootstrap';
+import axios from 'axios';
+
+
+
 
 
 const DinnerMenu = (props) => {
@@ -18,6 +23,7 @@ const DinnerMenu = (props) => {
     let entrees = []
     let sides = []
     let desserts = []
+    const [editingSides, setEditingSides] = useState(false)
 
     const addTodinnerItems = (item) => {
         dinnerItems = [...dinnerItems, item]
@@ -28,6 +34,16 @@ const DinnerMenu = (props) => {
             addTodinnerItems(item)
         }
     })
+
+    const showSideEditRow = () => {
+        const editRow = document.getElementById('edit-sides-row')
+        editRow.style.display = 'flex'
+    }
+
+    const hideSideEditRow = () => {
+        const editRow = document.getElementById('edit-sides-row')
+        editRow.style.display = 'none'
+    }
 
 
 
@@ -164,9 +180,74 @@ const DinnerMenu = (props) => {
                             })
                         }   
                     </Row>
-                    <Row className='justify-content-center text-center'>
+                    <Row id='edit-sides-row' className='justify-content-center text-center my-3'>
+                        <Col sm={3}>
+                            <Button variant='success' onClick={(e) => setEditingSides(true)}>Edit Sides</Button>
+                        </Col>
+                        <Col sm={3}>
+                            <Button variant='danger' onClick={(e) => {
+                                setEditingSides(false)
+                                hideSideEditRow()
+                            }}>Cancel</Button>
+                        </Col>
+                    </Row>
+                    <Row 
+                        className='justify-content-center text-center'  
+                        onClick={(e) => showSideEditRow()}
+                    >
                         <Col xs={8}>
-                            <h3>Sides: {sidesString}</h3>
+                            <h3>Sides $5: {sidesString}</h3>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            {editingSides && sides.map((side, index) => {
+                                return  <Row className='justify-content-center text-center my-3' key={index}>
+                                            <Col className='mt-4' sm={6}>
+                                                <input 
+                                                    className='side-edit-inputs' placeholder={side.title}
+                                                    name='edited-side'
+                                                    id={side.title}
+                                                />
+                                            </Col>
+                                            <Col className='mt-3' sm={4}>
+                                                <Button 
+                                                    className='mx-4' 
+                                                    variant='success'
+                                                    onClick={(e) => {
+                                                        const editedSide = document.getElementById(side.title)
+                                                        console.log(editedSide.value.length)
+                                                        if(editedSide.value.length > 0){
+                                                            const editedSideToPass = {
+                                                                ...side,
+                                                                title : editedSide.value
+                                                            }
+
+                                                            console.log(editedSideToPass)
+
+                                                            axios.put(`${menuItemsEndpoint}/edit-side-item/${side._id}`, editedSideToPass)
+                                                                .then((res) => console.log(res))
+                                                                .catch((err) => console.log(err.toString()))
+                                                                .finally(() => {
+                                                                    window.location.reload(false)
+                                                                })
+                                                        }
+                                                    }}
+                                                >Save</Button>
+                                                <Button 
+                                                    variant='danger'
+                                                    onClick={(e) => {
+                                                        axios.delete(`${menuItemsEndpoint}/delete-menu-item/${side._id}`)
+                                                            .then((res) => console.log(res))
+                                                            .catch((err) => console.log(err))
+                                                            .finally(() => {
+                                                                window.location.reload(false)
+                                                            })
+                                                    }}
+                                                >Delete</Button>
+                                            </Col>
+                                        </Row>
+                            })}
                         </Col>
                     </Row>
                 </div>

@@ -41,7 +41,7 @@ function ResponsiveAppBar() {
               </Col>
               <Col xs={2} id='menu-icon'  className='menu-icon' onClick={() => {
                 handleShowNavbar()
-                console.log('clicked')
+                // console.log('clicked')
               }}>
                 <div id='hamburger'>
                   <div id='bar1'></div>
@@ -145,7 +145,7 @@ function ResponsiveAppBar() {
                                       </li>}
 
                     {auth.userToken && <li className='condensed-dropdown'>
-                                      <NavLink to="/tasting-room">Tasting Room</NavLink>
+                                      <NavLink to="/tasting-room" onClick={(e) => handleShowNavbar()}>Tasting Room</NavLink>
                                     </li>}
                     
                     {auth.userToken && <li className='condensed-dropdown'>

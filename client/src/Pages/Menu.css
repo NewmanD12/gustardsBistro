@@ -45,3 +45,15 @@
 .subs {
     font-size: 54%;
 }
+
+.side-edit-inputs{
+    width: 80%;
+}
+
+#edit-sides-row{
+    display: none;
+}
+
+.sides-to-edit{
+    display: none;
+}
