@@ -82,8 +82,10 @@ const LunchMenu = (props) => {
     }
 
     const showSideEditRow = () => {
-        const editRow = document.getElementById('edit-sides-row')
-        editRow.style.display = 'flex'
+        if(auth.userToken){
+            const editRow = document.getElementById('edit-sides-row')
+            editRow.style.display = 'flex'
+        }
     }
 
     const hideSideEditRow = () => {
@@ -171,7 +173,7 @@ const LunchMenu = (props) => {
                             <h3>Sides $5: {sidesString}</h3>
                         </Col>
                     </Row>
-                    <Row>
+                    {auth.userToken && <Row>
                         <Col>
                             {editingSides && sides.map((side, index) => {
                                 return  <Row className='justify-content-center text-center my-3' key={index}>
@@ -222,6 +224,8 @@ const LunchMenu = (props) => {
                             })}
                         </Col>
                     </Row>
+                    }
+                    
                 </div>
 
                 <div id='bowls-div' className='course-containers mt-3'>

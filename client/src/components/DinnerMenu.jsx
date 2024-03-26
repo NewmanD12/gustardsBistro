@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import MenuItem from './MenuItem';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
+import { useAuth } from '../Hooks/Auth';
+
 
 
 
@@ -14,6 +16,8 @@ const DinnerMenu = (props) => {
 
     const { menuItems, currentMenu, setCurrentMenu, menuItemsEndpoint } = props
     const abbrevLegend = 'GF = Gluten Free, V = Vegan, VEG = Vegetarian, DF = Dairy Free, SF = Shellfish, NS = Nuts/Seeds'
+    const [editingSides, setEditingSides] = useState(false)
+    const auth = useAuth();
 
     let dinnerItems = []
     let starters = []
@@ -23,7 +27,6 @@ const DinnerMenu = (props) => {
     let entrees = []
     let sides = []
     let desserts = []
-    const [editingSides, setEditingSides] = useState(false)
 
     const addTodinnerItems = (item) => {
         dinnerItems = [...dinnerItems, item]
@@ -36,8 +39,10 @@ const DinnerMenu = (props) => {
     })
 
     const showSideEditRow = () => {
-        const editRow = document.getElementById('edit-sides-row')
-        editRow.style.display = 'flex'
+        if(auth.userToken){
+            const editRow = document.getElementById('edit-sides-row')
+            editRow.style.display = 'flex'
+        }
     }
 
     const hideSideEditRow = () => {
@@ -199,7 +204,7 @@ const DinnerMenu = (props) => {
                             <h3>Sides $5: {sidesString}</h3>
                         </Col>
                     </Row>
-                    <Row>
+                    {auth.userToken && <Row>
                         <Col>
                             {editingSides && sides.map((side, index) => {
                                 return  <Row className='justify-content-center text-center my-3' key={index}>
@@ -249,7 +254,7 @@ const DinnerMenu = (props) => {
                                         </Row>
                             })}
                         </Col>
-                    </Row>
+                    </Row>}
                 </div>
                 
                 <div id='comforts-div' className='mt-3'>
