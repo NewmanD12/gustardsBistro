@@ -46,7 +46,45 @@ async function allLocalfarmers(req, res){
     }
 }
 
+async function editFarmer(req, res){
+    try{
+        const farmerID = req.params.farmerID    
+        const editedFarmerBody = req.body
+        const updatedFarmer = await LocalFarmer.findByIdAndUpdate(farmerID, editedFarmerBody)
+
+        res.json({
+            success : true,
+            updatedFarmer : updatedFarmer
+        })
+
+    }
+    catch(e){
+        res.json({
+            success : false,
+            error : e.toString()
+        })
+    }
+}
+
+async function deleteLocalFarmer(req, res){
+    try{
+        const id = req.params.farmerID
+        const deletedFarmer = await LocalFarmer.findByIdAndDelete(id)
+        res.json({
+            success : true,
+        })
+    }
+    catch(e){
+        res.json({
+            success : false,
+            error : e.toString()
+        })
+    }
+}
+
 module.exports = {
     createLocalFarmer,
-    allLocalfarmers
+    allLocalfarmers,
+    editFarmer,
+    deleteLocalFarmer
 }
