@@ -59,7 +59,7 @@ const LocalFarmer = (props) => {
                     <Col xs={8}>
                         <h3>{farmer.name}</h3>
                         <p>{farmer.description}</p>
-                        {farmer.phoneNumber.length > 6 && <p>Phone Number: <CallTo phone={farmer.phoneNumber}>{farmer.phoneNumber}</CallTo></p>}
+                        {farmer.phoneNumber && farmer.phoneNumber.length > 6 && <p>Phone Number: <CallTo phone={farmer.phoneNumber}>{farmer.phoneNumber}</CallTo></p>}
                         {farmer.websiteURL && farmer.websiteURL.length > 3 && <p>Check Them Out At: <a className='websiteUrls' href={`https://${farmer.websiteURL}`}>{farmer.websiteURL}</a></p>}
                     </Col>
                 </Row>
