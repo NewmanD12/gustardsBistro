@@ -60,7 +60,7 @@ const LocalFarmer = (props) => {
                         <h3>{farmer.name}</h3>
                         <p>{farmer.description}</p>
                         {farmer.phoneNumber.length > 6 && <p>Phone Number: <CallTo phone={farmer.phoneNumber}>{farmer.phoneNumber}</CallTo></p>}
-                        {farmer.websiteURL.length > 3 && <p>Check Them Out At: <a className='websiteUrls' href={`https://${farmer.websiteURL}`}>{farmer.websiteURL}</a></p>}
+                        {farmer.websiteURL && farmer.websiteURL.length > 3 && <p>Check Them Out At: <a className='websiteUrls' href={`https://${farmer.websiteURL}`}>{farmer.websiteURL}</a></p>}
                     </Col>
                 </Row>
             </Container>}
