@@ -33,6 +33,7 @@ const CreateNewFarmer = (props) => {
           .catch((err) => console.log(err))
           .finally(() => {
             alert('Local Farmer Created')
+            window.location.reload(false)
           })
     
     
