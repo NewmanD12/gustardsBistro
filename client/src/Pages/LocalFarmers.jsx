@@ -1,16 +1,16 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import './LocalFarmers.css'
+import { useAuth } from '../Hooks/Auth';
+import axios from 'axios';
+import LocalFarmer from '../components/LocalFarmer';
 
 const LocalFarmers = (props) => {
 
   const { localFarmersEndpoint, localFarmers } = props
 
-  // console.log(localFarmers)
 
-  const CallTo = ({phone, children}) => {
-    return <a href={`tel:${phone}`} id='phoneNumber'>{children}</a>;
-  }
+  // console.log(localFarmers)
 
   return (
     <>  
@@ -20,16 +20,16 @@ const LocalFarmers = (props) => {
               <h1>Meet Our Local Farmers</h1>
             </Col>
           </Row>
-          {localFarmers.map((farmer, index) => {
-            return  <Row key={index} className='local-farmer-rows justify-content-center text-center mt-5'>
-                      <Col sm={8}>
-                        <h3>{farmer.name}</h3>
-                        <p>{farmer.description}</p>
-                        {farmer.phoneNumber && <p>Phone Number: <CallTo phone={farmer.phoneNumber}>{farmer.phoneNumber}</CallTo></p>}
-                        {farmer.websiteURL && <p>Check Them Out At: <a className='websiteUrls' href={`https://${farmer.websiteURL}`}>{farmer.websiteURL}</a></p>}
+          <Row className='local-farmer-rows justify-content-center text-center mt-5'>
+            {localFarmers.map((farmer, index) => {
+              return  <Col xs={12} key={index}>
+                        <LocalFarmer
+                          farmer={farmer}
+                          localFarmersEndpoint={localFarmersEndpoint}
+                        />
                       </Col>
-                    </Row>
-          })}
+            })}
+          </Row>
         </Container>
     </>
   )
