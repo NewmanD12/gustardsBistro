@@ -9,7 +9,7 @@ const KidsMenu = (props) => {
 
     let kidMenuItems = []
     let kidsDessertItems = []
-    const abbrevLegend = 'GF = Gluten Free, V = Vegan, VEG = Vegetarian, DF = Dairy Free, SF = Shellfish'
+    const abbrevLegend = 'GF = Gluten Free, V = Vegan, VEG = Vegetarian, DF = Dairy Free, SF = Shellfish, NS = Nuts/Seeds'
 
     const addToKidsMenuItems = (item) => {
         kidMenuItems = [...kidMenuItems, item]
