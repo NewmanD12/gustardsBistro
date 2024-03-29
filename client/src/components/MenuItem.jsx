@@ -22,17 +22,17 @@ const MenuItem = (props) => {
 
     let price = ''
     let course = ''
+
     
     const mealPeriodAndPrices = item.mealPeriodAndPrices
     if(currentMenu === 'lunch' || currentMenu === 'dinner'){
         const menuPriceFound = mealPeriodAndPrices.filter((item) => {
             return item.mealPeriod === currentMenu
         })
+
         price = menuPriceFound[0].price
         course = menuPriceFound[0].course
     }
-
-    // console.log(item)
 
     const subs = item.subsAndUpcharges.filter((sub) => {
         return sub.title
@@ -176,6 +176,32 @@ const MenuItem = (props) => {
                     {
                         mealPeriod : currentMenu, 
                         course : 'kidsMenu',
+                        price : editedMenuItem.price ? editedMenuItem.price : price 
+                    }]
+                }
+            }
+            else if(item.mealPeriodAndPrices[0].course === 'kidsDessert'){
+                if(currentMenu === 'lunch'){
+                    mealPeriodAndPrices = [{
+                        mealPeriod : currentMenu, 
+                        course : 'kidsDessert',
+                        price : editedMenuItem.price ? editedMenuItem.price : price
+                    }, 
+                    {
+                        mealPeriod : 'dinner', 
+                        course : 'kidsDessert',
+                        price : editedMenuItem.price ? editedMenuItem.price : price
+                    }]
+                }
+                else {
+                    mealPeriodAndPrices = [{
+                        mealPeriod : 'lunch', 
+                        course : 'kidsDessert',
+                        price : editedMenuItem.price ? editedMenuItem.price : price
+                    },
+                    {
+                        mealPeriod : currentMenu, 
+                        course : 'kidsDessert',
                         price : editedMenuItem.price ? editedMenuItem.price : price 
                     }]
                 }

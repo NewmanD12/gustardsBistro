@@ -32,6 +32,14 @@ const CreateNewMenuItem = (props) => {
           mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'lunch', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}]
         }
       }
+      else if(primaryMealPeriodAndPrice.course === 'kidsDessert'){
+        if(primaryMealPeriodAndPrice.mealPeriod === 'lunch'){
+          mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'dinner', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}] 
+        }
+        else {
+          mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'lunch', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}]
+        }
+      }
       else {
         mealPeriodAndPrices = secondaryMealPeriod.mealPeriod ? [primaryMealPeriodAndPrice, secondaryMealPeriod] : [primaryMealPeriodAndPrice]
       }
@@ -221,7 +229,8 @@ const CreateNewMenuItem = (props) => {
                   <option value='saladsAndStarters'>Crafted Salads & Starters</option>
                   <option value='sandwichesAndPies'>Sandwiches & Pies</option>
                   <option value='bowls'>Bowls</option>
-                  <option value='kidsMenu'>Kids Menu</option>
+                  <option value='kidsMenu'>Kids Entree</option>
+                  <option value='kidsDessert'>Kids Dessert</option>
                   <option value='sides'>Sides</option>
                   <option value='desserts'>Desserts</option>
                   </Form.Select>
@@ -235,7 +244,8 @@ const CreateNewMenuItem = (props) => {
                   <option value='sandwichesAndPies'>Sandwiches & Pies</option>
                   <option value='comfort'>Comfort</option>
                   <option value='entrees'>Entrees</option>
-                  <option value='kidsMenu'>Kids Menu</option>
+                  <option value='kidsMenu'>Kids Entree</option>
+                  <option value='kidsDessert'>Kids Dessert</option>
                   <option value='sides'>Sides</option>
                   <option value='desserts'>Desserts</option>
                   </Form.Select>
