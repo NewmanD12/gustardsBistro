@@ -9,12 +9,12 @@ const Gallery = () => {
 
   const [showCarousel, setShowCarousel] = useState(false)
 
-  const imgNames = ['garlicShot', 'flamingPan', 'basil', 'drippy', 'plating', 'platingFish', 'jqSalt', 'upperJQSalt', 'finishingTouches']
+  const imgNames = ['garlicShot', 'flamingPan', 'basil', 'drippy', 'plating', 'gyro', 'jqSalt', 'upperJQSalt', 'finishingTouches', 'steak', 'crunchysalad', 'friedsandy', 'glazedsteak', 'potdinner', 'salad', 'chococake']
 
   return (
     <>
         {showCarousel &&  <Container fluid>
-                            <Row className='justify-content-center text-center'>
+                            <Row className='justify-content-center align-items-center text-center'>
                               <Col 
                                 lg={12}
                                 id='modal-col'
@@ -46,7 +46,7 @@ const Gallery = () => {
         }
 
         <Container fluid>
-          <Row className='justify-content-center'>
+          <Row className='justify-content-center align-items-center'>
             {imgNames.map((name, index) => {
                 return <Col lg={4} className='mt-3' key={index}>
                           <img
@@ -61,9 +61,9 @@ const Gallery = () => {
                               const img = document.getElementById(name)
                               img.style.opacity = '1'
                             }}
-                            onClick={() => {
-                              setShowCarousel(!showCarousel)
-                            }}
+                            // onClick={() => {
+                            //   setShowCarousel(!showCarousel)
+                            // }}
                           />
                         </Col>
             })}

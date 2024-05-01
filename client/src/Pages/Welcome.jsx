@@ -9,7 +9,7 @@ const Welcome = () => {
   return (
     <>
       <Container fluid id='welcome-body'>
-        <Row className='justify-content-center text-center'>
+        <Row className='justify-content-center align-items-center text-center'>
           <Col>
             <WelcomeImgCarousel /> 
           </Col>

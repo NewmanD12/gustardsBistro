@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const WelcomeImgCarousel = () => {
 
-    const imageNames = ['steakAndTaters', 'hamSammich', 'flamey-drip']
+    const imageNames = ['burgerandmac', 'feast', 'pasta3', 'cremebrulee']
 
     return (
 
