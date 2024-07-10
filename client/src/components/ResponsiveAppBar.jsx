@@ -8,11 +8,14 @@ import { useAuth } from '../Hooks/Auth';
 
 
 
-function ResponsiveAppBar() {
+const ResponsiveAppBar = (props) => {
+
+  const { currentMenu, setCurrentMenu } = props
   const navigate = useNavigate()
   const auth = useAuth();
   const [showNavbar, setShowNavbar] = useState(false)
   
+  console.log(currentMenu, setCurrentMenu)
   
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
@@ -27,7 +30,6 @@ function ResponsiveAppBar() {
   //   else {
   //     navElements.classList.toggle('active')
   //   }
-
   // }
 
   return (
@@ -61,8 +63,18 @@ function ResponsiveAppBar() {
                                           <NavLink to="/about">About</NavLink>
                                         </li>}
                     
-                    {!auth.userToken && <li onClick={() => handleShowNavbar()}>
-                                          <NavLink to="/menu">Menu</NavLink>
+                    {!auth.userToken && <li onClick={(e) => {
+                                              handleShowNavbar()
+                                              setCurrentMenu('lunch')
+                                            }}>
+                                          <NavLink to="/menu">Lunch Menu</NavLink>
+                                        </li>}
+
+                    {!auth.userToken && <li onClick={(e) => {
+                                              handleShowNavbar()
+                                              setCurrentMenu('dinner')
+                                            }}>
+                                          <NavLink to="/menu">Dinner Menu</NavLink>
                                         </li>}
 
                     {!auth.userToken && <li onClick={() => handleShowNavbar()}>
@@ -100,30 +112,44 @@ function ResponsiveAppBar() {
                                               const dropdown = document.getElementById('dropdown-content')
                                               dropdown.style.display = 'none'
                                             }} to='/' className='other-pages-links'>Home</NavLink>
+
                                             <NavLink onClick={() => {
                                               const dropdown = document.getElementById('dropdown-content')
                                               dropdown.style.display = 'none'
                                             }} to='/about' className='other-pages-links'>About</NavLink>
+
                                             <NavLink onClick={() => {
                                               const dropdown = document.getElementById('dropdown-content')
                                               dropdown.style.display = 'none'
-                                            }} to='/menu' className='other-pages-links'>Menu</NavLink>
+                                              setCurrentMenu('lunch')
+                                            }} to='/menu' className='other-pages-links'>Lunch Menu</NavLink>
+
+                                            <NavLink onClick={() => {
+                                              const dropdown = document.getElementById('dropdown-content')
+                                              dropdown.style.display = 'none'
+                                              setCurrentMenu('dinner')
+                                            }} to='/menu' className='other-pages-links'>Dinner Menu</NavLink>
+
                                             <NavLink onClick={() => {
                                               const dropdown = document.getElementById('dropdown-content')
                                               dropdown.style.display = 'none'
                                             }} to='/kids-menu' className='other-pages-links'>Kids Menu</NavLink>
+
                                             <NavLink onClick={() => {
                                               const dropdown = document.getElementById('dropdown-content')
                                               dropdown.style.display = 'none'
                                             }} to='/tasting-room' className='other-pages-links'>Tasting Room</NavLink>
+
                                             <NavLink onClick={() => {
                                               const dropdown = document.getElementById('dropdown-content')
                                               dropdown.style.display = 'none'
                                             }} to='/gallery' className='other-pages-links'>Gallery</NavLink>
+
                                             <NavLink onClick={() => {
                                               const dropdown = document.getElementById('dropdown-content')
                                               dropdown.style.display = 'none'
                                             }} to='/localfarmers' className='other-pages-links'>Local Farmers</NavLink>
+
                                           </div>
                                         </li>
                                         }
@@ -137,7 +163,17 @@ function ResponsiveAppBar() {
                                       </li>}
                     
                     {auth.userToken && <li className='condensed-dropdown'>
-                                        <NavLink to='/menu' onClick={(e) => handleShowNavbar()}>Menu</NavLink>
+                                        <NavLink to='/menu' onClick={(e) => {
+                                                              handleShowNavbar()
+                                                              setCurrentMenu('lunch')
+                                                            }}>Lunch Menu</NavLink>
+                                      </li>}
+                    
+                    {auth.userToken && <li className='condensed-dropdown'>
+                                        <NavLink to='/menu' onClick={(e) => {
+                                                              handleShowNavbar()
+                                                              setCurrentMenu('dinner')
+                                                            }}>Dinner Menu</NavLink>
                                       </li>}
 
                     {auth.userToken && <li className='condensed-dropdown'>

@@ -100,13 +100,8 @@ const LunchMenu = (props) => {
                 <div>
                     <Row className='justify-content-center text-center m-3'>
                         <Col>
-                            <h1 
-                                id='switch-menu'
-                                onClick={(e) => {
-                                    setCurrentMenu('dinner')
-                                }}
-                            >
-                                Click Here To See The Dinner Menu
+                            <h1>
+                                Lunch Menu
                             </h1>
                         </Col>
                     </Row>

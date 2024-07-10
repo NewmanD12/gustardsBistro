@@ -48,7 +48,10 @@ function App() {
   const router = createBrowserRouter([
     {
       path : '/',
-      element : <Layout />,
+      element : <Layout 
+                  currentMenu={currentMenu}
+                  setCurrentMenu={setCurrentMenu}
+                />,
       children : [
         {
           index : true,
