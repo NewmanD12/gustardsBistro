@@ -57,3 +57,8 @@
 .sides-to-edit{
     display: none;
 }
+
+#menu {
+    font-size: 70px;
+    font-weight: bolder;
+}

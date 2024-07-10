@@ -117,7 +117,7 @@ const DinnerMenu = (props) => {
                 <div>
                     <Row className='justify-content-center text-center m-3'>
                         <Col>
-                        <h1>Dinner Menu</h1>
+                            <h1 id='menu'>Dinner Menu</h1>
                         </Col>
                     </Row>
                 </div>

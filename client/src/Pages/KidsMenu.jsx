@@ -48,9 +48,20 @@ const KidsMenu = (props) => {
     return (
         <>
             <Container fluid id='kids-menu-body' className='py-5'>
+
+                <div>
+                    <Row className='justify-content-center text-center m-3'>
+                        <Col>
+                            <h1 id='menu'>
+                                Kid's Menu
+                            </h1>
+                        </Col>
+                    </Row>
+                </div>
+
                 <div id='kids-menu-div' className='course-containers'>
                     <Row className='justify-content-center text-center m-3'>
-                        <h2 id='kids-menu-header' className='course-headers'>Kid's Entrees</h2>
+                        <h2 id='kids-menu-header' className='course-headers'>Entrees</h2>
                         <h6>{abbrevLegend}</h6>
                     </Row>
                     <Row className='justify-content-center'>
@@ -66,9 +77,10 @@ const KidsMenu = (props) => {
                         })}
                     </Row>
                 </div>
+
                 <div id='kids-desserts-div' className='course-containers mt-5'>
                     <Row className='justify-content-center text-center m-3'>
-                        <h2 id='kids-desserts-header' className='course-headers'>Kid's Desserts</h2>
+                        <h2 id='kids-desserts-header' className='course-headers'>Desserts</h2>
                         <h6>{abbrevLegend}</h6>
                     </Row>
                     <Row className='justify-content-center'>
