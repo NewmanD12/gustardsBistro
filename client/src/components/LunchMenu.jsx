@@ -93,6 +93,8 @@ const LunchMenu = (props) => {
         editRow.style.display = 'none'
     }
 
+    console.log(saladsAndStarters)
+
     return (
         <>
             <Container fluid id='lunch-menu-body' className='py-5'>
@@ -109,7 +111,7 @@ const LunchMenu = (props) => {
 
                 <div id='starters-div' className='course-containers'>
                     <Row className='justify-content-center text-center m-3'>
-                        <h2 id='app-header' className='course-headers'>Crafted Salads & Starters
+                        <h2 id='app-header' className='course-headers'>Crafted Soups, Salads & Starters
                         </h2>
                         <h6>{abbrevLegend}</h6>
                     </Row>
@@ -125,6 +127,10 @@ const LunchMenu = (props) => {
                                     </Col>
                         })
                         }   
+                    </Row>
+                    <Row className='justify-content-center text-center m-3'>
+                        <h3>PROTEIN ADD ON:</h3>
+                        <h4>Marinated Chicken Breast - 6 / Grilled Coulotte - 8 / Salmon - 12</h4>
                     </Row>
                 </div>
                 

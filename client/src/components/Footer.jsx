@@ -24,8 +24,8 @@ const Footer = () => {
           </Col>
           <Col md={4} className='footer-cols mt-5' id='hours-of-operation-col'>
             <h4>Hours Of Operation</h4>
-            <p>Wednesday - Monday: 11am - 9pm</p>
-            <p>Closed Tuesday</p>
+            <p>Wednesday - Sunday: 11am - 8:30pm</p>
+            <p>Closed Monday & Tuesday</p>
           </Col>
         </Row>
         <Row className='justify-content-center text-center my-5'>

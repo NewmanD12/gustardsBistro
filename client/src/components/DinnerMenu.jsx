@@ -123,7 +123,8 @@ const DinnerMenu = (props) => {
                 </div>
                 <div id='starters-div'>
                     <Row className='justify-content-center text-center m-3'>
-                        <h1 id='starters-header' className='course-headers'>Starters, Soups, Salads
+                        <h1 id='starters-header' className='course-headers'>Soups, Salads & Starters
+
                         </h1>
                         <h6>{abbrevLegend}</h6>
                     </Row>
@@ -140,8 +141,12 @@ const DinnerMenu = (props) => {
                         })
                         }   
                     </Row>
+                    <Row className='justify-content-center text-center m-3'>
+                        <h3>PROTEIN ADD ON:</h3>
+                        <h4>Marinated Chicken Breast - 6 / Grilled Coulotte - 8 / Salmon - 12</h4>
+                    </Row>
                 </div>
-                
+
                 <div id='sandwiches-and-pies-div' className='mt-3'>
                     <Row className='justify-content-center text-center m-3'>
                         <h1 id='sandwiches-and-pies-header' className='course-headers'>Sandwiches & Pies
