@@ -33,7 +33,7 @@ const DinnerMenu = (props) => {
     }
 
     menuItems.map((item, index) => {
-        if(item.mealPeriodAndPrices[0].mealPeriod === 'dinner'){
+        if(item.mealPeriodAndPrices[0].mealPeriod === 'newDinner'){
             addTodinnerItems(item)
         }
     })
@@ -124,6 +124,7 @@ const DinnerMenu = (props) => {
                 <div id='starters-div'>
                     <Row className='justify-content-center text-center m-3'>
                         <h1 id='starters-header' className='course-headers'>Soups, Salads & Starters
+
                         </h1>
                         <h6>{abbrevLegend}</h6>
                     </Row>
@@ -145,26 +146,7 @@ const DinnerMenu = (props) => {
                         <h4>Marinated Chicken Breast - 6 / Grilled Coulotte - 8 / Salmon - 12</h4>
                     </Row>
                 </div>
-                {/* <div id='apps-div' className='mt-3'>
-                    <Row className='justify-content-center text-center m-3'>
-                        <h1 id='app-header' className='course-headers'>Crafted Soups & Salads
-                        </h1>
-                        <h6>{abbrevLegend}</h6>
-                    </Row>
-                    <Row className='justify-content-center'>
-                        {soupsAndSalads.length >= 1 && soupsAndSalads.map((item, index) => {
-                            return <Col md={6} key={index}>
-                                        <MenuItem 
-                                            item={item} 
-                                            key={index} 
-                                            currentMenu={currentMenu}
-                                            menuItemsEndpoint={menuItemsEndpoint}
-                                        />
-                                    </Col>
-                        })
-                        }   
-                    </Row>
-                </div> */}
+
                 <div id='sandwiches-and-pies-div' className='mt-3'>
                     <Row className='justify-content-center text-center m-3'>
                         <h1 id='sandwiches-and-pies-header' className='course-headers'>Sandwiches & Pies

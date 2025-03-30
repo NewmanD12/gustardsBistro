@@ -31,7 +31,7 @@ const MenuItem = (props) => {
             menutoChange = 'lunch'
         }
         else{
-            menutoChange = 'dinner'
+            menutoChange = 'newDinner'
         }
 
         const menuPriceFound = mealPeriodAndPrices.filter((item) => {
