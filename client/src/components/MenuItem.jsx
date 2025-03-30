@@ -12,7 +12,7 @@ const MenuItem = (props) => {
     const { item, currentMenu, menuItemsEndpoint } = props
     const auth = useAuth();
 
-    // console.log(item)
+    console.log(item)
 
 
     const [isEditing, setIsEditing] = useState(false)
@@ -26,10 +26,19 @@ const MenuItem = (props) => {
     
     const mealPeriodAndPrices = item.mealPeriodAndPrices
     if(currentMenu === 'lunch' || currentMenu === 'dinner'){
+        let menutoChange = ''
+        if (currentMenu === 'lunch'){
+            menutoChange = 'lunch'
+        }
+        else{
+            menutoChange = 'dinner'
+        }
+
         const menuPriceFound = mealPeriodAndPrices.filter((item) => {
-            return item.mealPeriod === currentMenu
+            return item.mealPeriod === menutoChange
         })
 
+        // console.log(menutoChange)
         price = menuPriceFound[0].price
         course = menuPriceFound[0].course
     }

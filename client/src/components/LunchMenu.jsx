@@ -32,7 +32,7 @@ const LunchMenu = (props) => {
         }
     })
 
-    // console.log(lunchItems)
+    console.log(lunchItems)
 
     lunchItems.map((item) => {
         // console.log(item.mealPeriodAndPrices[0].mealPeriod)
