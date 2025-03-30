@@ -28,6 +28,12 @@ const CreateNewMenuItem = (props) => {
         if(primaryMealPeriodAndPrice.mealPeriod === 'lunch'){
           mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'dinner', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}] 
         }
+        else if(primaryMealPeriodAndPrice.mealPeriod === 'newDinner'){
+          mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'dinner', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}] 
+        }
+        else if(primaryMealPeriodAndPrice.mealPeriod === 'newLunch'){
+          mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'dinner', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}] 
+        }
         else {
           mealPeriodAndPrices = [primaryMealPeriodAndPrice, {mealPeriod : 'lunch', course : primaryMealPeriodAndPrice.course, price : primaryMealPeriodAndPrice.price}]
         }
@@ -202,6 +208,8 @@ const CreateNewMenuItem = (props) => {
                   <option id='pick-meal'>Meal</option>
                   <option value='lunch'>Lunch</option>
                   <option value='dinner'>Dinner</option>
+                  <option value='newLunch'>New Lunch</option>
+                  <option value='newDinner'>New Dinner</option>
                 </Form.Select>
               </Form.Group>
             </Col>
@@ -236,7 +244,36 @@ const CreateNewMenuItem = (props) => {
                   </Form.Select>
                 }
 
+                {primaryMealPeriodAndPrice['mealPeriod'] === 'newLunch' && 
+              
+                  <Form.Select name='course'>
+                  <option id='pick-course'>Pick A Course</option>
+                  <option value='saladsAndStarters'>Crafted Salads & Starters</option>
+                  <option value='sandwichesAndPies'>Sandwiches & Pies</option>
+                  <option value='bowls'>Bowls</option>
+                  <option value='kidsMenu'>Kids Entree</option>
+                  <option value='kidsDessert'>Kids Dessert</option>
+                  <option value='sides'>Sides</option>
+                  <option value='desserts'>Desserts</option>
+                  </Form.Select>
+                }
+
                 {primaryMealPeriodAndPrice['mealPeriod'] === 'dinner' && 
+                  <Form.Select name='course'>
+                  <option id='pick-course'>Pick A Course</option>
+                  <option value='starters'>Starters</option>
+                  <option value='soupsAndSalads'>Crafted Soups & Salads</option>
+                  <option value='sandwichesAndPies'>Sandwiches & Pies</option>
+                  <option value='comfort'>Comfort</option>
+                  <option value='entrees'>Entrees</option>
+                  <option value='kidsMenu'>Kids Entree</option>
+                  <option value='kidsDessert'>Kids Dessert</option>
+                  <option value='sides'>Sides</option>
+                  <option value='desserts'>Desserts</option>
+                  </Form.Select>
+                }
+
+                {primaryMealPeriodAndPrice['mealPeriod'] === 'newDinner' && 
                   <Form.Select name='course'>
                   <option id='pick-course'>Pick A Course</option>
                   <option value='starters'>Starters</option>
