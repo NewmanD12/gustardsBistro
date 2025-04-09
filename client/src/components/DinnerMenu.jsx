@@ -123,7 +123,7 @@ const DinnerMenu = (props) => {
                 </div>
                 <div id='starters-div'>
                     <Row className='justify-content-center text-center m-3'>
-                        <h1 id='starters-header' className='course-headers'>Soups, Salads & Starters
+                        <h1 id='starters-header' className='course-headers'>Starter, Soup, Salads
 
                         </h1>
                         <h6>{abbrevLegend}</h6>
