@@ -296,7 +296,8 @@ const MenuItem = (props) => {
             
             <Row className='justify-content-center'>
                 <Col id='menu-item-title' xs={8}>{item.title}</Col>
-                <Col id='menu-item-price'>${price}</Col>
+                {price > 0 && <Col id='menu-item-price'>${price}</Col>}
+                {price == 0 && <Col id='menu-item-price'>{price}</Col>}
             </Row>
 
             {abbreviatedAllergyWarnings.length > 0 && <Row>
