@@ -143,7 +143,7 @@ const DinnerMenu = (props) => {
                     </Row>
                     <Row className='justify-content-center text-center m-3'>
                         <h3>PROTEIN ADD ON:</h3>
-                        <h4>Marinated Chicken Breast - 6 / Grilled Coulotte - 8 / Salmon - 12</h4>
+                        <h4>Marinated Chicken Breast - 6 / Grilled Coulotte - 9 / Salmon - 12</h4>
                     </Row>
                 </div>
 
