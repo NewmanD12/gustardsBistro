@@ -151,6 +151,8 @@ const DinnerMenu = (props) => {
                     <Row className='justify-content-center text-center m-3'>
                         <h1 id='sandwiches-and-pies-header' className='course-headers'>Sandwiches & Pies
                         </h1>
+                        <h4 id='sandwiches-and-pies-header'>All Sandwiches come with Choice of Side
+                        </h4>
                         <h6>{abbrevLegend}</h6>
                     </Row>
                     <Row className='justify-content-center'>
