@@ -55,16 +55,16 @@ const MenuItem = (props) => {
             finalSubsAndPrices = `${listOfSubs[0].title} $${listOfSubs[0].price}`
         }
         else if(lengthOfSubs === 2){
-            finalSubsAndPrices = `${listOfSubs[0].title} ${listOfSubs[0].price ? `$${listOfSubs[0].price}` : '' } | ${listOfSubs[1].title} ${listOfSubs[1].price ? `$${listOfSubs[1].price}` : '' }`
+            finalSubsAndPrices = `${listOfSubs[0].title} ${listOfSubs[0].price ? `$${listOfSubs[0].price}` : '' } / ${listOfSubs[1].title} ${listOfSubs[1].price ? `$${listOfSubs[1].price}` : '' }`
         }
         else if(lengthOfSubs === 3){
-            finalSubsAndPrices = `${listOfSubs[0].title} ${listOfSubs[0].price ? `$${listOfSubs[0].price}` : '' } | ${listOfSubs[1].title} ${listOfSubs[1].price ? `$${listOfSubs[1].price}` : '' } | ${listOfSubs[2].title} ${listOfSubs[2].price ? `$${listOfSubs[2].price}` : '' }`
+            finalSubsAndPrices = `${listOfSubs[0].title} ${listOfSubs[0].price ? `$${listOfSubs[0].price}` : '' } / ${listOfSubs[1].title} ${listOfSubs[1].price ? `$${listOfSubs[1].price}` : '' } / ${listOfSubs[2].title} ${listOfSubs[2].price ? `$${listOfSubs[2].price}` : '' }`
         }
         else if(lengthOfSubs === 4){
-            finalSubsAndPrices = `${listOfSubs[0].title} ${listOfSubs[0].price ? `$${listOfSubs[0].price}` : '' } | ${listOfSubs[1].title} ${listOfSubs[1].price ? `$${listOfSubs[1].price}` : '' } | ${listOfSubs[2].title} ${listOfSubs[2].price ? `$${listOfSubs[2].price}` : '' } | ${listOfSubs[3].title} ${listOfSubs[3].price ? `$${listOfSubs[3].price}` : '' }`
+            finalSubsAndPrices = `${listOfSubs[0].title} ${listOfSubs[0].price ? `$${listOfSubs[0].price}` : '' } / ${listOfSubs[1].title} ${listOfSubs[1].price ? `$${listOfSubs[1].price}` : '' } / ${listOfSubs[2].title} ${listOfSubs[2].price ? `$${listOfSubs[2].price}` : '' } / ${listOfSubs[3].title} ${listOfSubs[3].price ? `$${listOfSubs[3].price}` : '' }`
         }
         else if(lengthOfSubs === 5){
-            finalSubsAndPrices = `${listOfSubs[0].title} ${listOfSubs[0].price ? `$${listOfSubs[0].price}` : '' } | ${listOfSubs[1].title} ${listOfSubs[1].price ? `$${listOfSubs[1].price}` : '' } | ${listOfSubs[2].title} ${listOfSubs[2].price ? `$${listOfSubs[2].price}` : '' } | ${listOfSubs[3].title} ${listOfSubs[3].price ? `$${listOfSubs[3].price}` : '' } | ${listOfSubs[4].title} ${listOfSubs[4].price ? `$${listOfSubs[4].price}` : '' }`
+            finalSubsAndPrices = `${listOfSubs[0].title} ${listOfSubs[0].price ? `$${listOfSubs[0].price}` : '' } / ${listOfSubs[1].title} ${listOfSubs[1].price ? `$${listOfSubs[1].price}` : '' } / ${listOfSubs[2].title} ${listOfSubs[2].price ? `$${listOfSubs[2].price}` : '' } / ${listOfSubs[3].title} ${listOfSubs[3].price ? `$${listOfSubs[3].price}` : '' } / ${listOfSubs[4].title} ${listOfSubs[4].price ? `$${listOfSubs[4].price}` : '' }`
         }
         
         return finalSubsAndPrices
