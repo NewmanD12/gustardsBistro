@@ -5,9 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from './Hooks/Auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ReactGA from 'react-ga4';
-
-ReactGA.initialize('G-B4D58M7142');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
