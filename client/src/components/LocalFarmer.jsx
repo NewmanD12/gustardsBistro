@@ -4,6 +4,7 @@ import { useAuth } from '../Hooks/Auth';
 import './LocalFarmer.css'
 import PhoneInput from 'react-phone-number-input/input'
 import axios from 'axios';
+import ScrollToTopButton from './ScrollToTopButton';
 
 const LocalFarmer = (props) => {
     const { farmer, localFarmersEndpoint } = props
@@ -200,6 +201,7 @@ const LocalFarmer = (props) => {
                         
                     </Col>
                 </Row>}
+                <ScrollToTopButton />
         </div>
     )
 }

@@ -194,7 +194,7 @@
 @media (max-width: 775px) {
   .nav-elements {
     position: absolute;
-    right: 0;
+    right: -10px;
     top: 5px;
     background-color: white;
     width: 0px;

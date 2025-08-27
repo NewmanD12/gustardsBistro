@@ -6,10 +6,7 @@ import MenuItem from './MenuItem';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import { useAuth } from '../Hooks/Auth';
-
-
-
-
+import ScrollToTopButton from '../components/ScrollToTopButton.jsx'
 
 
 const DinnerMenu = (props) => {
@@ -302,6 +299,7 @@ const DinnerMenu = (props) => {
                         }   
                     </Row>
                 </div>
+                <ScrollToTopButton />
             </Container>
         </>
     )

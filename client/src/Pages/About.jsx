@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { loremIpsum } from 'react-lorem-ipsum';
 import './About.css'
+import ScrollToTopButton from '../components/ScrollToTopButton.jsx'
 
 const About = () => {
   return (
@@ -71,7 +72,7 @@ const About = () => {
               <img className='aboutPics' src='flamey-drip.jpg'/>
             </Col>
           </Row>
-          
+          <ScrollToTopButton />
         </Container>
     </>
   )
