@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import MenuItem from '../components/MenuItem'
 import '../Pages/Menu.css'
+import ScrollToTopButton from '../components/ScrollToTopButton'
 
 const KidsMenu = (props) => {
 
@@ -96,6 +97,7 @@ const KidsMenu = (props) => {
                         })}
                     </Row>
                 </div>
+                <ScrollToTopButton />
             </Container>
         </>
     )

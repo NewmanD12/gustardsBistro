@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import { Container, Row, Col, Modal, Button} from 'react-bootstrap'
-
+import ScrollToTopButton from '../components/ScrollToTopButton'
 import './Gallery.css'
 
 
@@ -68,6 +68,7 @@ const Gallery = () => {
                         </Col>
             })}
           </Row>
+          <ScrollToTopButton />
         </Container>
     </>
   )
