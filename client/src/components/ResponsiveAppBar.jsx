@@ -15,7 +15,7 @@ const ResponsiveAppBar = (props) => {
   const auth = useAuth();
   const [showNavbar, setShowNavbar] = useState(false)
   
-  console.log(currentMenu, setCurrentMenu)
+  // console.log(currentMenu, setCurrentMenu)
   
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
