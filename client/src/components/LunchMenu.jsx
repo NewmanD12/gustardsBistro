@@ -34,7 +34,6 @@ const LunchMenu = (props) => {
         }
     })
 
-    console.log(lunchItems)
 
     lunchItems.map((item) => {
         // console.log(item.mealPeriodAndPrices[0].mealPeriod)
@@ -95,8 +94,6 @@ const LunchMenu = (props) => {
         editRow.style.display = 'none'
     }
 
-    console.log(saladsAndStarters)
-
     return (
         <>
             <Container fluid id='lunch-menu-body' className='py-5'>
@@ -131,8 +128,12 @@ const LunchMenu = (props) => {
                         }   
                     </Row>
                     <Row className='justify-content-center text-center m-3'>
-                        <h3>PROTEIN ADD ON:</h3>
-                        <h4>Marinated Chicken Breast - $6 / Grilled Coulotte - $9 / Salmon - $12</h4>
+                        <h3>ADD ON:</h3>
+                        <h4>Marinated Chicken Breast - $7 / Grilled Coulotte - $10 / Salmon - $13 / Crumbled Goat Cheese - $3 / Crumbled Blue Cheese - $3 / Chopped Bacon - $3</h4>
+                    </Row>
+                    <Row className='justify-content-center text-center m-3'>
+                        <h3>Available Dressings:</h3>
+                        <h4>Ranch / Blue Cheese / Balsamic Vinaigrette / Orange-Maple Vinaigrette</h4>
                     </Row>
                 </div>
                 
