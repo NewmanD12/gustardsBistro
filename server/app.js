@@ -15,6 +15,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const menuItemsRouter = require('./routes/menuItems');
 const localFarmersRouter = require('./routes/localFarmers')
+const bulletinRouter = require('./routes/bulletin')
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/menu-items', menuItemsRouter);
 app.use('/api/local-farmers', localFarmersRouter)
+app.use('/api/bulletin', bulletinRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
