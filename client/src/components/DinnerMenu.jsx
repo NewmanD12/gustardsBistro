@@ -117,6 +117,18 @@ const DinnerMenu = (props) => {
                             <h1 id='menu'>Dinner Menu</h1>
                         </Col>
                     </Row>
+                    <Row className='justify-content-center text-center'>
+                        <Col>
+                            <h3>Reservations Recommended!</h3>
+                        </Col> 
+                    </Row>
+                    <Row className='justify-content-center text-center mb-3'>
+                        <Col>
+                        <a href="tel:+13045362274" class="btn btn-lg mt-3" id='reservationButton'>
+                            <i class="fas fa-phone-alt me-2"></i> Call Us: (304) 536-2274
+                        </a>
+                        </Col>
+                    </Row>
                 </div>
                 <div id='starters-div'>
                     <Row className='justify-content-center text-center m-3'>

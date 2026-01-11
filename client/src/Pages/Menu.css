@@ -62,3 +62,8 @@
     font-size: 60px;
     font-weight: bolder;
 }
+
+#reservationButton {
+    background-color: rgb(90, 121, 147);
+    color: white;
+}
